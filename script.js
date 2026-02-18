@@ -39,6 +39,19 @@ function resizeYesButton() {
 
   yesButton.style.fontSize = `${newFontSize}px`;
 }
+function generateMessage(yesButton) {
+  const messages = [
+    "No",
+    "Are you sure?",
+    "Teyaaa pleaseee",
+    "malulungkot ako :(",
+    "WAHHH PLEASE",
+    "Press mo lang yes please",
+  ];
+
+  const messageIndex = Math.min(noCount, messages.length - 1);
+  return messages[messageIndex];
+}
 
 function generateMessage(noCount) {
   const messages = [
