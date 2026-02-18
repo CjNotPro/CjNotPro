@@ -44,7 +44,7 @@ function generateMessage(noCount) {
   const messages = [
     "No",
     "Are you sure?",
-    "Antukin pleaseee",
+    "Teyaaa pleaseee",
     "malulungkot ako :(",
     "WAHHH PLEASE",
     "Press mo lang yes please",
