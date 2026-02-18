@@ -13,6 +13,19 @@ let noCount = 0;
 
 yesButton.addEventListener("click", handleYesClick);
 
+yesButton.addEventListener("click", function () {
+  if (play) {
+    noCount++;
+    const imageIndex = Math.min(noCount, MAX_IMAGES);
+    changeImage(imageIndex);
+    resizeYesButton();
+    updateNoButtonText();
+    if (noCount === MAX_IMAGES) {
+      play = false;
+    }
+  }
+});
+
 noButton.addEventListener("click", function () {
   if (play) {
     noCount++;
@@ -39,7 +52,7 @@ function resizeYesButton() {
 
   yesButton.style.fontSize = `${newFontSize}px`;
 }
-function generateMessage(yesButton) {
+function generateMessage(noCount) {
   const messages = [
     "No",
     "Are you sure?",
